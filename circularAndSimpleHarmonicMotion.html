@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Circular and Simple Harmonic Motion</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- The three lines needed to make responsive START next. -->
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <!-- The three lines needed to make responsive END above. -->
+        
+        <style>canvas { border: 1px solid black;}</style>
+        <script type="text/javascript" src="../myLibrary.js"></script>
+        <!-- --
+        <script type="text/javascript" src="../../myLibraries/myLibrary.js"></script>
+        <!-- -->
+        <script type="text/javascript" src="circularAndSimpleHarmonicMotion.js">
+        </script>
+        <script>
+            window.onload = function() {
+                    initialise_myCircularAndSimpleHarmonicMotionWork();
+            };
+        </script>
+        <link rel="stylesheet" type="text/css" href="../myWebsite.css">
+        <!-- --
+        <link rel="stylesheet" type="text/css" href="../../myWebsite.css">
+        <!-- -->
+    </head>
+    <body>
+        <h1>Circular and Simple Harmonic Motion</h1>
+        <div class="row">
+            <div class="col-sm-4">
+                <div align="right">
+                    <h3>
+                    <a href="https://rippon.tinytake.com/sf/MTYzNjMzMl81NTI0Nzk1" id="appDescriptionDemoLink" target="_blank">
+                        <b>click here for Simple Harmonic Motion demo</b>
+                    </a>
+                    </h3>
+                    <div id="appDescription">
+                        and/or read the following ... 
+                        <br><br>
+                        This is intended as an aid for teaching Simple Harmonic Motion (SHM).
+                        It elucidates the intimate connections between SHM, circular motion and trigonometry.
+                        <br><br>
+                        The user selects a speed (slow, medium or fast) and then simply clicks 'Go', sits back,
+                        and enjoys the animation unfolding!
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <select>
+                    <option>select speed</option>
+                    <option onclick="setAngleIncrement(Math.PI/100)">slow</option>
+                    <option onclick="setAngleIncrement(Math.PI/50)">medium</option>
+                    <option onclick="setAngleIncrement(Math.PI/30)">fast</option>
+                </select>
+                <p>
+                    <button onclick="doStuff();">Go!</button>
+                    <!--
+                    <button onclick="stop_circularAndSimpleHarmonicMotion();">Stop</button>
+                    -->
+                </p>
+                <div>
+                    <canvas width="500" height="400" id="myCanvas"> </canvas>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
